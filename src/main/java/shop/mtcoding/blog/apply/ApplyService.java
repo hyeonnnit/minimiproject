@@ -9,6 +9,5 @@ import org.springframework.stereotype.Service;
 @Service
 public class ApplyService {
     private final ApplyJPARepository applyJPARepository;
-    private final ApplyQueryRepository applyQueryRepository;
 
 }

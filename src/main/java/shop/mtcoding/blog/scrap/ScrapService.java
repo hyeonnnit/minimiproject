@@ -7,6 +7,5 @@ import org.springframework.stereotype.Service;
 @Service
 public class ScrapService {
     private final ScrapJPARepository scrapJPARepository;
-    private final ScrapQueryRepository scrapQueryRepository;
 
 }
