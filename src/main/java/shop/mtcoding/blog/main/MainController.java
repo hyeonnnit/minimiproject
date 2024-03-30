@@ -49,7 +49,6 @@ public class MainController {
         return "person/post-detail";
     }
 
-    // 지원하기 버튼 안 보임
     @PostMapping("/posts/{id}/apply")
     public String personPostApply(@PathVariable int id, Integer resumeChoice) {
         return "redirect:/posts/" + id;
@@ -60,27 +59,27 @@ public class MainController {
         return "redirect:/posts/" + id;
     }
 
-
-    @GetMapping("/company/matching")
-    public String matchingResumeForm() {
-        return "company/matching";
-    }
-
-    @PostMapping("/company/match")
-    public String matchingPost(int postChoice) {
-        return "redirect:/company/matching";
-    }
-
-    //맞춤 공고 - 개인이 보는 매칭 공고
-    @GetMapping("/person/matching")
-    public String matchingPostForm() {
-        return "person/matching";
-    }
-
-    @PostMapping("/person/match")
-    public String matchingResume(@RequestParam("resumeChoice") Integer resumeChoice) {
-        return "redirect:/person/matching";
-    }
+//
+//    @GetMapping("/company/matching")
+//    public String matchingResumeForm() {
+//        return "company/matching";
+//    }
+//
+//    @PostMapping("/company/match")
+//    public String matchingPost(int postChoice) {
+//        return "redirect:/company/matching";
+//    }
+//
+//    //맞춤 공고 - 개인이 보는 매칭 공고
+//    @GetMapping("/person/matching")
+//    public String matchingPostForm() {
+//        return "person/matching";
+//    }
+//
+//    @PostMapping("/person/match")
+//    public String matchingResume(@RequestParam("resumeChoice") Integer resumeChoice) {
+//        return "redirect:/person/matching";
+//    }
 }
 
 
