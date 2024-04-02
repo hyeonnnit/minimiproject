@@ -37,7 +37,7 @@ public class OfferController {
     @GetMapping("/company/offer/{id}/detail")
     public String companyOfferDetail() {
 
-        return "company/mypage-resume-detail";
+        return "company/offer-resume-detail";
     }
 
     // 제안한 이력서 DELETE (취소)

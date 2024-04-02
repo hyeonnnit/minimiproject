@@ -1,8 +1,8 @@
-{{> /layout/header}}
+{{>layout/header}}
 
 <div class="container d-flex">
     <div class=" mx-2 pb-4 w-100">
-        <div class=" border border-tertiary p-5 rounded shadow">
+        <div class=" p-5 ">
             <div class="d-flex justify-content-between">
                 <h1 class=" d-inline-flex">마이페이지</h1>
             </div>
@@ -11,27 +11,27 @@
 
                 <form action="/person/info/update-form" method="get">
                     <div class="px-5 mt-5">
-                        <img src="/images/{{user.profile}}" id="profile" class="mx-auto d-block mt-5 my-3 w-50 h-50">
+                        <img src="/images/파일명" id="profile" class="mx-auto d-block mt-5 my-3 w-50 h-50">
                     </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text justify-content-center hs_span_size init_color hs_span">이름</span>
-                        <input type="text" class="form-control" value="{{sessionUser.name}}" readonly>
+                    <div class="mb-3 mt-3">
+                        <label for="name" class="form-label">이름</label>
+                        <input type="name" class="form-control" id="name" name="name" value="이서현" readonly>
                     </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text justify-content-center hs_span_size init_color hs_span">생년월일</span>
-                        <input type="text" class="form-control" value="{{user.birth}}" id="" readonly>
+                    <div class="mb-3 mt-3">
+                        <label for="birth" class="form-label">생년월일</label>
+                        <input type="birth" class="form-control" id="birth" name="birth" value="2000-08-09" readonly>
                     </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text justify-content-center hs_span_size init_color hs_span">연락처</span>
-                        <input type="text" class="form-control" value="{{user.tel}}" readonly>
+                    <div class="mb-3 mt-3">
+                        <label for="tel" class="form-label">연락처</label>
+                        <input type="tel" class="form-control" id="tel" name="tel" value="01012345678" readonly>
                     </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text justify-content-center hs_span_size init_color hs_span">주소</span>
-                        <input type="text" class="form-control" value="{{user.address}}" readonly>
+                    <div class="mb-3 mt-3">
+                        <label for="address" class="form-label">주소</label>
+                        <input type="address" class="form-control" id="address" name="address" value="부산광역시" readonly>
                     </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text justify-content-center hs_span_size init_color hs_span">이메일</span>
-                        <input type="text" class="form-control" value="{{user.email}}" readonly>
+                    <div class="mb-3 mt-3">
+                        <label for="email" class="form-label">이메일</label>
+                        <input type="email" class="form-control" id="email" name="email" value="lsh@nate.com" readonly>
                     </div>
 
                     <hr class="my-4">
@@ -44,16 +44,16 @@
             </div>
         </div>
     </div>
-    <div class="list-group mx-2">
-        <a href="/person/info" class="list-group-item shadow " style="width: 150px;">회원정보관리</a>
-        <a href="/person/resume" class="list-group-item shadow">이력서관리</a>
-        <a href="/person/scrap" class="list-group-item hs_list_effect shadow">스크랩한 공고</a>
-        <a href="/person/offers" class="list-group-item shadow">받은 제안</a>
-        <a href="/person/applies" class="list-group-item shadow">지원 현황</a>
+    <div class="list-group" style="position: fixed; right: 80px; top: 220px; width: 180px;">
+        <a href="/person/info" class="list-group-item active" style="width: 180px;">회원정보관리</a>
+        <a href="/person/resume" class="list-group-item " style="width: 180px;">이력서관리</a>
+        <a href="/person/scrap" class="list-group-item hs_list_effect" style="width: 180px;">스크랩한 공고</a>
+        <a href="/person/offers" class="list-group-item " style="width: 180px;">받은 제안</a>
+        <a href="/person/applies" class="list-group-item" style="width: 180px;">지원 현황</a>
     </div>
 </div>
 <!-- list-group( 오른쪽 바로가기) 시작 -->
 
 <!-- list-group( 오른쪽 바로가기) 끝 -->
 
-{{> /layout/footer}}
+{{>layout/footer}}

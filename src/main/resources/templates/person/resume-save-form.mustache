@@ -27,25 +27,7 @@
                                 <div class="input-group mb-3">
                                     <input type="file" class="form-control mt-2" accept="image/*"
                                            name="profile" id="profile" multiple required/>
-                                    <script>
-                                        $('#profile').change(function () {
-                                            let input = this;
-                                            if (input.files && input.files[0]) {
-                                                let reader = new FileReader();
 
-                                                reader.onload = function (e) {
-                                                    $('#profilePreview').html('<img src="' + e.target.result + '" style="max-width: 100%;">');
-                                                };
-
-                                                reader.readAsDataURL(input.files[0]);
-
-                                                // 파일명 출력
-                                                let fileName = input.files[0].name;
-                                                $('#profile').val(fileName);
-                                                console.log(fileName);
-                                            }
-                                        });
-                                    </script>
                                 </div>
                             </div>
                         </div>
@@ -58,9 +40,11 @@
                                 <h4>커리어</h4>
                                 <input type="text" name="career" class="w-100 opacity-50" value="1년 근무" rows="10">
                                 <h4>간단 소개</h4>
-                                <input type="text" name="simpleIntroduce" class="w-100 opacity-50" value="꾸준히 공부하는 개발자입니다" rows="10">
+                                <input type="text" name="simpleIntroduce" class="w-100 opacity-50"
+                                       value="꾸준히 공부하는 개발자입니다" rows="10">
                                 <h4>포트폴리오 주소</h4>
-                                <input type="text" class="form-control mt-2" id="" name="portfolio" value="http://qmfmqfqmf"
+                                <input type="text" class="form-control mt-2" id="" name="portfolio"
+                                       value="http://qmfmqfqmf"
                                        style="display: block;">
                             </div>
                         </div>
@@ -111,7 +95,7 @@
                                 </div>
                             </div>
                             <script>
-                                $('form').submit(function(event) {
+                                $('form').submit(function (event) {
                                     let checkedCount = $('input[type="checkbox"]:checked').length;
 
                                     if (checkedCount === 0) {
@@ -131,20 +115,14 @@
                             <button type="submit" class="btn btn-outline-success mb-3 mt-3"
                                     style="width: 100%">저장하기
                             </button>
+                            <a href="/person/resume" class="btn btn-outline-success mt-3 mb-3"
+                               style="width: 100%">취소</a>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </form>
-    <!-- list-group( 오른쪽 바로가기) 시작 -->
-    <div class="list-group mx-2">
-        <a href="/person/info" class="list-group-item shadow " style="width: 150px;">회원정보관리</a>
-        <a href="/person/resume" class="list-group-item shadow">이력서관리</a>
-        <a href="/person/scrap" class="list-group-item hs_list_effect shadow">스크랩한 공고</a>
-        <a href="/person/offers" class="list-group-item shadow">받은 제안</a>
-        <a href="/person/applies" class="list-group-item shadow">지원 현황</a>
-    </div>
-    <!-- list-group( 오른쪽 바로가기) 끝 -->
 </div>
 {{> layout/footer}}
